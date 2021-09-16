@@ -1,0 +1,24 @@
+name: front v3 CI CD
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - uses: actions/checkout@v1 
+    - name: Install node
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Bundle
+      run: |
+        npm ci
+        npm run build:internal
+    - uses: actions/upload-artifact@v2
+      with:
+        name: internal 
+        path: dist
