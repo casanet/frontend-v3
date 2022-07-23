@@ -9,7 +9,6 @@ import { AutoTimeoutDialogComponent } from '../../dialogs/auto-timeout-dialog/au
 import { CalibrateDialogComponent } from '../../dialogs/calibrate-dialog/calibrate-dialog.component';
 import { CreateMinionDialogComponent } from '../../dialogs/create-minion-dialog/create-minion-dialog.component';
 import { Subscription } from 'rxjs';
-import { TimelineDialogComponent } from '../../dialogs/timeline-dialog/timeline-dialog.component';
 import { ColorLight, CommandsRepoDevice, Minion, MinionStatus, SwitchOptions, Toggle } from '../../../be-assets/sharedInterfaces';
 import { DeepCopy } from '../../../be-assets/deepCopy';
 
@@ -447,10 +446,8 @@ export class MinionsComponent implements OnInit, OnDestroy {
 	}
 
 	public async minionsTimeline() {
-		this.dialog.open(TimelineDialogComponent, {
-			data: {},
-			height: '90%',
-		});
+		// TODO:
+		
 	}
 
 	public async refreshMinions(scanNetwork = false) {
