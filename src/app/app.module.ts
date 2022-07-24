@@ -16,7 +16,6 @@ import { CreateActivityDialogComponent } from './dialogs/create-activity-dialog/
 import { ManageRegisteredUsersComponent } from './dialogs/manage-registared-users-dialog/manage-registared-users-dialog.component';
 import { CreateTimingDialogComponent } from './dialogs/create-timing-dialog/create-timing-dialog.component';
 import { CreateUserDialogComponent } from './dialogs/create-user-dialog/create-user-dialog.component';
-import { TimelineDialogComponent } from './dialogs/timeline-dialog/timeline-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SharedModule } from './shared.module';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -34,7 +33,6 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatTableModule } from '@angular/material/table';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MglTimelineModule } from 'angular-mgl-timeline';
 import { MatRadioModule } from '@angular/material/radio';
 
 export function setupTranslateFactory(
@@ -69,7 +67,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     CreateTimingDialogComponent,
     CreateUserDialogComponent,
     ManageRegisteredUsersComponent,
-    TimelineDialogComponent,
   ],
   exports: [
   ],
@@ -97,7 +94,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatStepperModule,
     MatSelectModule,
     MatRadioModule,
-    MglTimelineModule,
     localStorage.getItem('use-sw') !== 'true' ? [] : ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
@@ -131,7 +127,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     CreateTimingDialogComponent,
     CreateUserDialogComponent,
     ManageRegisteredUsersComponent,
-    TimelineDialogComponent,
   ]
 })
 export class AppModule { }
